@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/snake.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+    <div>
+      <h3>Snake - Classic</h3>
+      <div>
+        <button id="newGame">New Game</button>
+      </div>
+      <div>
+        <p id="gameData"></p>
+        <div id="userScore">
+          <p>Score: <span id="points"></span></p>
+        </div>
+        <table id="grid"></table>
+      </div>
+    </div>
+    <div id="sideInfo">
+      <h3>Other game mode:</h3>
+      <div id="gameLinks">
+        <a href="../portals"><button>Portals</button></a>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./js/snake.js"></script>
+  <script src="./classic/js/index.js"></script>
+</body>
+</html>

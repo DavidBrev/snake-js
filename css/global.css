@@ -1,0 +1,26 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  align-items: center;
+  padding: 20px;
+}
+button{
+  color: white;
+  background-color: #007FFF;
+  margin-right: 10px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 7px;
+}
+#headerAlign{
+  display: flex;
+  align-items: center;
+}
+#wrapper{
+  padding-left: 20px;
+  display: flex;
+}
+#sideInfo{
+  margin-left: 50px;
+}
