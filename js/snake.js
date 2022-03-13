@@ -118,10 +118,9 @@ const GenerateGame = (gridWidth, gridHeight, baseTimeInterval, timeSubstract, ti
   function update(){
     const firstSquare = snake[snake.length-1];
     let newSquare = null;
-    const actualDir = getActualDir();
     if(inputCache.length > 0){
       const newDir = inputCache.shift();
-      if(newDir + 2 !== actualDir && newDir - 2 !== actualDir) direction = newDir;
+      if(newDir + 2 !== direction && newDir - 2 !== direction) direction = newDir;
     }
     if(direction === 0){
       newSquare = firstSquare - gridWidth;
@@ -167,27 +166,6 @@ const GenerateGame = (gridWidth, gridHeight, baseTimeInterval, timeSubstract, ti
       if(timeInterval < timeLimit) timeInterval = timeLimit;
     }
     interval = setInterval(update, timeInterval);
-  }
-
-  function getActualDir(){
-    switch(snake[snake.length-1]-snake[snake.length-2]){
-      case (gridWidth*gridHeight)-gridWidth:
-        return 0;
-      case -gridWidth+1:
-        return 1;
-      case -(gridWidth*gridHeight)+gridWidth:
-        return 2;
-      case gridWidth-1:
-        return 3;
-      case -gridWidth:
-        return 0;
-      case 1:
-        return 1;
-      case gridWidth:
-        return 2;
-      case -1:
-        return 3;
-    }
   }
 
   function updateUI(lastSquare, newSquare){
